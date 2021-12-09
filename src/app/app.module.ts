@@ -4,8 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 //Modulo personalizado
-import { PrimeNgModule } from './prime-ng/prime-ng.module';
 import { SharedModule } from './shared/shared.module';
+import { AppRouterModule } from './app-router.module';
 
 
 @NgModule({
@@ -14,8 +14,8 @@ import { SharedModule } from './shared/shared.module';
   ],
   imports: [
     BrowserModule,
-    PrimeNgModule,
-    SharedModule
+    SharedModule,
+    AppRouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
