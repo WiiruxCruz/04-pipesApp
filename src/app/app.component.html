@@ -6,7 +6,18 @@
 
 <button
   pButton
-  (click)="mostrarNombre()"
+  type="button"
+  class="p-button-help"
+  icon="pi pi-check"
+  iconPos="right"
   label="Cambiar nombre"
+  (click)="mostrarNombre()"
 >
 </button>
+
+<p-card
+  [header]="nombre | uppercase"
+  subheader="Esto es un subheader"
+>
+  Content
+</p-card>
