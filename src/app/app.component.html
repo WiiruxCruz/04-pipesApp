@@ -1,1 +1,10 @@
-<h1>Hola mundo !</h1>
+<h1>{{ nombre | uppercase }}</h1>
+<h1>{{ valor | number }}</h1>
+<h1>{{ obj | json }}</h1>
+
+<button
+  pButton
+  (click)="mostrarNombre()"
+  label="Cambiar nombre"
+>
+</button>
