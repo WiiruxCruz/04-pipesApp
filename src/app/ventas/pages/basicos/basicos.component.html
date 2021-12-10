@@ -9,15 +9,26 @@
   <div class="col-4">
     <p-card
       header="upperCase"
+      [subheader]="nombreLower | uppercase"
     >
-      Texto de prueba
+      {{ nombreLower | uppercase }}
     </p-card>
   </div>
   <div class="col-4">
-    2
+    <p-card
+      header="upperCase"
+      [subheader]="nombreLower | lowercase"
+    >
+      {{ nombreLower | lowercase }}
+    </p-card>
   </div>
   <div class="col-4">
-    3
+    <p-card
+      header="upperCase"
+      [subheader]="nombreLower | titlecase"
+    >
+      {{ nombreLower | titlecase }}
+    </p-card>
   </div>
 
 </div>
