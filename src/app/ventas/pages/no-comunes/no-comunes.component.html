@@ -11,7 +11,16 @@
       legend="i18nSelect Pipe"
       [toggleable]="true"
     >
-      Saludos {{ nombre }}, es un placer {{ genero | i18nSelect: invitacionMapa }} a nuestro evento.
+      <p>
+        Saludos {{ nombre }}, es un placer {{ genero | i18nSelect: invitacionMapa }} a nuestro evento.
+      </p>
+      <button
+        pButton
+        label="Cambiar persona"
+        class="p-button-help"
+        (click)="cambiarCliente()"
+      >
+      </button>
     </p-fieldset>
   </div>
 
@@ -20,7 +29,16 @@
       legend="i18nPlural Pipe"
       [toggleable]="true"
     >
-      Actualmente tenemos {{ clientes.length | i18nPlural: clientesMapa }} cliente esperando.
+      <p>
+        Actualmente tenemos {{ clientes.length | i18nPlural: clientesMapa }}
+      </p>
+      <button
+        pButton
+        label="Borrar cliente"
+        class="p-button-danger"
+        (click)="borrarCliente()"
+      >
+      </button>
     </p-fieldset>
   </div>
 </div>
