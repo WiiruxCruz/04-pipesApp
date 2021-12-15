@@ -55,4 +55,18 @@ export class NoComunesComponent {
     edad: 29,
     direccion: 'Ciudad de Mexico, Mexico'
   }
+
+  //Json Pipe
+  heroes = [
+    {
+      nombre: 'Superman',
+      vuela: true
+    }, {
+      nombre: 'Robin',
+      vuela: false
+    }, {
+      nombre: 'Aquaman',
+      vuela: false
+    }
+  ];
 }
