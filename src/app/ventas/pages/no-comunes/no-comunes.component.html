@@ -6,7 +6,7 @@
 </div>
 
 <div class="grid">
-  <div class="col md-6 sm-9">
+  <div class="p-col p-md-6 p-sm-9">
     <p-fieldset
       legend="i18nSelect Pipe"
       [toggleable]="true"
@@ -24,7 +24,7 @@
     </p-fieldset>
   </div>
 
-  <div class="col md-6 sm-9">
+  <div class="p-col p-md-6 p-sm-9">
     <p-fieldset
       legend="i18nPlural Pipe"
       [toggleable]="true"
@@ -42,7 +42,7 @@
     </p-fieldset>
   </div>
 
-  <div class="col md-6 sm-9">
+  <div class="p-col p-md-6 p-sm-9">
     <p-fieldset
       legend="Slice Pipe"
       [toggleable]="true"
@@ -64,6 +64,21 @@
 
       <b>slice:0:4</b>
       <pre>{{ nombre | slice:0:4 }}</pre>
+    </p-fieldset>
+  </div>
+
+  <div class="p-col p-md-6">
+    <p-fieldset
+      legend="KeyValue Pipe"
+      [toggleable]="true"
+    >
+    <ul>
+      <li
+        *ngFor="let item of persona | keyvalue"
+      >
+        <b>{{ item.key }}: {{ item.value }}</b>
+    </li>
+    </ul>
     </p-fieldset>
   </div>
 </div>

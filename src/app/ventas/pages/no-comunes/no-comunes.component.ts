@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EADDRINUSE } from 'constants';
 
 @Component({
   selector: 'app-no-comunes',
@@ -46,5 +47,12 @@ export class NoComunesComponent {
     if(this.clientes.length > 0){
       this.clientes.pop();
     }
+  }
+
+  //KeyValue Pipe
+  persona = {
+    nombre: 'Alfredo',
+    edad: 29,
+    direccion: 'Ciudad de Mexico, Mexico'
   }
 }
