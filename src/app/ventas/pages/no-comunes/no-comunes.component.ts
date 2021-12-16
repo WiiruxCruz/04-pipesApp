@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { EADDRINUSE } from 'constants';
+import { interval } from 'rxjs';
+import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-no-comunes',
@@ -69,4 +70,18 @@ export class NoComunesComponent {
       vuela: false
     }
   ];
+
+  //async pipe
+  miObservable = interval(5000).pipe( tap( () => console.log('interval') ) ); //0,1,2,3,4,5,6
+
+  valorPromesa = new Promise(
+    (resolve, reject) => {
+      setTimeout(
+        () => {
+          resolve('Tenemos data de promesa');
+        }, 3500
+      )
+    }
+  )
+  ;
 }
