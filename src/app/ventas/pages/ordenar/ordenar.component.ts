@@ -11,6 +11,8 @@ export class OrdenarComponent {
 
   isMayuscula: boolean = false;
 
+  ordernarPor: string = '';
+
   heroes: Heroe[] = [
     {
       nombre: 'Superman',
@@ -41,6 +43,11 @@ export class OrdenarComponent {
 
   convertirMayuscula(){
     this.isMayuscula = !this.isMayuscula;
+  }
+
+  cambiarOrden( valor: string ){
+    this.ordernarPor = valor;
+    console.log(valor);
   }
 
 
